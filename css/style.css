@@ -113,16 +113,16 @@ button:hover {
 .footer {
   margin-top: 20px;
   font-size: 14px;
-  color: #aaaaaa;
+  color: #6B7280;
 }
 
 .footer a {
   margin-left: 5px;
-  color: #00c6ff;
+  color: #A78BFA;
   text-decoration: none;
   transition: color 0.3s;
 }
 
 .footer a:hover {
-  color: #66d9ff;
+  color: #7C3AED;
 }
