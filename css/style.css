@@ -1,4 +1,3 @@
-
 /* ==========================
    RESET BÁSICO
 ========================== */
@@ -6,7 +5,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-
 }
 
 /* ==========================
@@ -14,24 +12,25 @@
 ========================== */
 body {
   min-height: 100vh;
-  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  background: linear-gradient(135deg, #F4F1FF, #EDE9FE);
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  font-family: "Vampiro One", system-ui;
+  font-family: "Montserrat", sans-serif;
 }
 
 /* ==========================
    CONTAINER PRINCIPAL
 ========================== */
 .login-container {
-  background: rgba(20, 20, 20, 0.95);
+  background: #FFFFFF;
   width: 100%;
   max-width: 400px;
   padding: 40px;
   border-radius: 12px;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.7);
+  border: 1px solid #DDD6FE;
+  box-shadow: 0 20px 40px rgba(124, 58, 237, 0.2);
   text-align: center;
 }
 
@@ -41,13 +40,13 @@ body {
 .login-container h1 {
   font-size: 28px;
   margin-bottom: 8px;
-  color: #ffffff;
+  color: #2E1065;
 }
 
 .login-container p {
   font-size: 14px;
   margin-bottom: 25px;
-  color: #bbbbbb;
+  color: #6B7280;
 }
 
 /* ==========================
@@ -62,27 +61,28 @@ body {
   display: block;
   font-size: 14px;
   margin-bottom: 6px;
-  color: #cccccc;
+  color: #2E1065;
 }
 
 .input-group input {
   width: 100%;
   padding: 14px;
   border-radius: 8px;
-  border: none;
-  background: #1e1e1e;
-  color: #ffffff;
+  border: 1px solid #DDD6FE;
+  background: #FFFFFF;
+  color: #2E1065;
   font-size: 15px;
   outline: none;
   transition: box-shadow 0.3s, border 0.3s;
 }
 
 .input-group input::placeholder {
-  color: #888888;
+  color: #6B7280;
 }
 
 .input-group input:focus {
-  box-shadow: 0 0 0 2px #00c6ff;
+  border-color: #7C3AED;
+  box-shadow: 0 0 0 3px rgba(167, 139, 250, 0.4);
 }
 
 /* ==========================
@@ -94,17 +94,19 @@ button {
   margin-top: 10px;
   border: none;
   border-radius: 8px;
-  background: linear-gradient(135deg, #00c6ff, #0072ff);
-  color: #020617;
+  background: #7C3AED;
+  color: #FFFFFF;
+  font-family: "Montserrat", sans-serif;
   font-size: 16px;
   font-weight: bold;
   cursor: pointer;
-  transition: transform 0.2s, box-shadow 0.2s;
+  transition: transform 0.2s, box-shadow 0.2s, background 0.2s;
 }
 
 button:hover {
+  background: #A78BFA;
   transform: translateY(-2px);
-  box-shadow: 0 10px 25px rgba(0, 114, 255, 0.5);
+  box-shadow: 0 10px 25px rgba(124, 58, 237, 0.4);
 }
 
 /* ==========================
@@ -118,11 +120,21 @@ button:hover {
 
 .footer a {
   margin-left: 5px;
-  color: #A78BFA;
+  color: #7C3AED;
   text-decoration: none;
   transition: color 0.3s;
 }
 
 .footer a:hover {
-  color: #7C3AED;
+  color: #E11D48;
+}
+
+/* ==========================
+   RESPONSIVIDADE
+========================== */
+@media (max-width: 480px) {
+  .login-container {
+    width: 90%;
+    padding: 25px 20px;
+  }
 }
