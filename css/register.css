@@ -1,124 +1,146 @@
-/* RESET */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
- 
-}
-
-/* FUNDO DA PÁGINA */
+/* ==========================
+   FUNDO DA PÁGINA
+========================== */
 body {
   min-height: 100vh;
-  background: linear-gradient(135deg, #0f172a, #020617);
+  background: linear-gradient(135deg, #F4F1FF, #EDE9FE);
   display: flex;
-  align-items: center;
   justify-content: center;
-  color: #e5e7eb;
-  flex-direction: column;
-  font-family: "Vampiro One", system-ui;
+  align-items: center;
+  font-family: "Montserrat", sans-serif;
+  padding: 20px;
 }
 
-
-/* LAYOUT PRINCIPAL */
+/* ==========================
+   CONTAINER DO CADASTRO
+========================== */
 .register-wrapper {
   display: flex;
-  gap: 70px;
-  align-items: center;
+  width: 100%;
+  max-width: 900px;
+  background: #FFFFFF;
+  border: 1px solid #DDD6FE;
+  border-radius: 12px;
+  box-shadow: 0 20px 40px rgba(124, 58, 237, 0.2);
+  overflow: hidden;
 }
 
-/* TEXTO LATERAL */
+/* ==========================
+   LADO ESQUERDO
+========================== */
 .register-info {
-  max-width: 320px;
+  flex: 1;
+  padding: 40px;
+  background: #EDE9FE;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .register-info h1 {
-  font-size: 38px;
-  margin-bottom: 12px;
-  color: #f9fafb;
+  font-size: 28px;
+  margin-bottom: 8px;
+  color: #2E1065;
 }
 
 .register-info p {
-  font-size: 16px;
-  color: #cbd5f5;
-  margin-bottom: 24px;
+  font-size: 14px;
+  margin-bottom: 25px;
+  color: #6B7280;
 }
 
 .register-info span {
-  display: block;
-  margin-bottom: 6px;
-  color: #94a3b8;
+  font-size: 14px;
+  color: #6B7280;
 }
 
 .register-info a {
-  color: #38bdf8;
-  text-decoration: none;
+  margin-top: 6px;
+  color: #7C3AED;
+  font-size: 14px;
   font-weight: 600;
+  text-decoration: none;
+  transition: color 0.3s;
 }
 
 .register-info a:hover {
-  text-decoration: underline;
+  color: #E11D48;
 }
 
-/* CARD DO FORMULÁRIO */
+/* ==========================
+   LADO DIREITO (FORMULÁRIO)
+========================== */
 .register-card {
-  background: rgba(15, 23, 42, 0.85);
-  backdrop-filter: blur(14px);
+  flex: 1;
   padding: 40px;
-  border-radius: 18px;
-  width: 360px;
-  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.6);
-  border: 1px solid rgba(148, 163, 184, 0.15);
+  background: #FFFFFF;
 }
 
-/* CAMPOS */
-.input-group {
-  display: flex;
-  flex-direction: column;
+.register-card .input-group {
+  text-align: left;
   margin-bottom: 18px;
 }
 
-.input-group label {
+.register-card .input-group label {
+  display: block;
   font-size: 14px;
   margin-bottom: 6px;
-  color: #60a5fa;
+  color: #2E1065;
 }
 
-.input-group input {
-  padding: 14px;
-  border-radius: 10px;
-  border: 1px solid #1e293b;
-  background-color: #020617;
-  color: #f1f5f9;
-  font-size: 14px;
-  outline: none;
-  transition: border 0.3s, box-shadow 0.3s;
-}
-
-.input-group input::placeholder {
-  color: #64748b;
-}
-
-.input-group input:focus {
-  border-color: #38bdf8;
-  box-shadow: 0 0 0 2px rgba(56, 189, 248, 0.3);
-}
-
-/* BOTÃO */
-button {
-  margin-top: 24px;
+.register-card .input-group input {
   width: 100%;
   padding: 14px;
-  border: none;
-  border-radius: 12px;
-  background: linear-gradient(135deg, #38bdf8, #2563eb);
-  color: #020617;
-  font-weight: 700;
-  font-size: 16px;
-  cursor: pointer;
-  transition: transform 0.2s, box-shadow 0.2s;
+  border-radius: 8px;
+  border: 1px solid #DDD6FE;
+  background: #FFFFFF;
+  color: #2E1065;
+  font-size: 15px;
+  outline: none;
+  transition: box-shadow 0.3s, border 0.3s;
 }
 
-button:hover {
+.register-card .input-group input::placeholder {
+  color: #6B7280;
+}
+
+.register-card .input-group input:focus {
+  border-color: #7C3AED;
+  box-shadow: 0 0 0 3px rgba(167, 139, 250, 0.4);
+}
+
+.register-card button {
+  width: 100%;
+  padding: 14px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 8px;
+  background: #7C3AED;
+  color: #FFFFFF;
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s, background 0.2s;
+}
+
+.register-card button:hover {
+  background: #A78BFA;
   transform: translateY(-2px);
-  box-shadow: 0 12px 25px rgba(37, 99, 235, 0.5);
+  box-shadow: 0 10px 25px rgba(124, 58, 237, 0.4);
+}
+
+/* ==========================
+   RESPONSIVIDADE
+========================== */
+@media (max-width: 720px) {
+  .register-wrapper {
+    flex-direction: column;
+    width: 92%;
+  }
+
+  .register-info,
+  .register-card {
+    padding: 25px 20px;
+  }
 }
