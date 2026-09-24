@@ -1,3 +1,19 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AccessFlow | Cadastro</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/register.css">
+</head>
+<body>
+
 <main class="register-wrapper">
 
   <!-- LADO ESQUERDO -->
@@ -39,3 +55,80 @@
   </section>
 
 </main>
+
+</body>
+</html>
+2. css/register.css
+
+Abra o arquivo, Ctrl + A, cole isto e salve:
+
+css
+/* ==========================
+   CADASTRO
+========================== */
+.register-wrapper {
+  display: flex;
+  width: 100%;
+  max-width: 900px;
+  background: #FFFFFF;
+  border: 1px solid #DDD6FE;
+  border-radius: 12px;
+  box-shadow: 0 20px 40px rgba(124, 58, 237, 0.2);
+  overflow: hidden;
+}
+
+.register-info {
+  flex: 1;
+  padding: 40px;
+  background: #EDE9FE;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.register-info h1 {
+  font-size: 28px;
+  margin-bottom: 8px;
+  color: #2E1065;
+}
+
+.register-info p {
+  font-size: 14px;
+  margin-bottom: 25px;
+  color: #6B7280;
+}
+
+.register-info span {
+  font-size: 14px;
+  color: #6B7280;
+}
+
+.register-info a {
+  margin-top: 6px;
+  color: #7C3AED;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.register-info a:hover {
+  color: #E11D48;
+}
+
+.register-card {
+  flex: 1;
+  padding: 40px;
+}
+
+@media (max-width: 720px) {
+  .register-wrapper {
+    flex-direction: column;
+    width: 92%;
+  }
+
+  .register-info,
+  .register-card {
+    padding: 25px 20px;
+  }
+}
